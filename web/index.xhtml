@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Login</title> 
+
+    </h:head>
+
+    <h:body >
+        <body bgcolor = "black"></body>
+        <h:form>
+
+            <h1><font color ="green">Login Form</font></h1>
+
+           
+
+            <div id="user_name" style="margin-top: 20px">
+                <label style="margin: 10px"><font color ="blue">User Name</font></label>
+                <p:inputText value="#{loginBean.username}"/>
+            </div>
+
+            <div id="password" style="margin-top: 20px" >
+                <label style="margin: 15px"><font color ="blue">Password</font></label>
+                <p:password value="#{loginBean.password}" />
+            </div>
+
+            <div style="text-align: center;margin-right: 20px; margin-bottom: 20px; margin-top: 20px">
+                <span><p:commandButton id="login_btn" class="commandButton" value="Login" icon="pi pi-home" action="/result.xhtml"/>
+        
+                </span>
+                <span><p:commandButton class="commandButton" value="Sign Up" icon="pi pi-sign-in" action="/result.xhtml"/>
+                </span>
+                <div style="text-align: center"> <h:messages for="login_btn" infoStyle="color:green" errorStyle="color:red" /></div>
+            </div>
+
+        </h:form>
+    </h:body>
+</html>
+
+
+
